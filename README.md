@@ -12,11 +12,11 @@ In order to create a local copy of the project you need:
 
 ## Starting server using IntelliJ IDEA
 1.  Open project and run DemoSpringApplication.main.
-2.  Project should start in your localhost.
+2.  Project should start in your localhost
 
 ##Postman
 1. In Postman folder you will find file DemoWithoutSecurity.json.
-2. Import this file into your postman.
+2. Import this file into your postman
 
 ##Version of project
 1. If you on main branch, u can go through url in controllers and test it or using POSTMAN.
