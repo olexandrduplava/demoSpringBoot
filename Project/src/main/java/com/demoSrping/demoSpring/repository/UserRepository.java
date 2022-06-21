@@ -19,4 +19,5 @@ public interface UserRepository extends CrudRepository<User, Long>{
     @Query("SELECT u.name FROM User u where u.articles.size > 3")
     List<String> usersWithMoreThanThreeArticles();
 
+    User findByName(String name);
 }

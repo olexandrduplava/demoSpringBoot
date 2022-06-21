@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
     public User getUserById(Long id)
     {
          Optional<User> userOptional = userRepository.findById(id);
-         if (userOptional.isEmpty()){
+         if (!userOptional.isPresent()){
              throw new EntityNotFoundException("User with id: " + id + " not exist in db");
          }
         return userOptional.get();
@@ -58,7 +58,7 @@ public class UserServiceImpl implements UserService {
     {
         for (Article ar: user.getArticles()) {
             Optional<Article> article = articleRepository.findById(ar.getId());
-            if(article.isEmpty()){
+            if(!article.isPresent()){
                 throw new EntityNotFoundException("Article: " + ar + " not exist");
             }
         }
@@ -68,7 +68,7 @@ public class UserServiceImpl implements UserService {
     public void delete(Long id)
     {
         Optional<User> userOptional = userRepository.findById(id);
-        if(userOptional.isEmpty()){
+        if(!userOptional.isPresent()){
             throw new EntityNotFoundException("User with id: " + id + " not exist in db");
         }
         userRepository.deleteById(id);

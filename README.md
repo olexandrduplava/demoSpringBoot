@@ -12,21 +12,17 @@ In order to create a local copy of the project you need:
 
 ## Starting server using IntelliJ IDEA
 1.  Open project and run DemoSpringApplication.main.
-2.  Project should start in your localhost
+2.  Project should start in your localhost;
 
-##Postman
-1. In Postman folder you will find file DemoWithoutSecurity.json.
-2. Import this file into your postman
+## AppCheck
+1. Open in postman folder Security and press LOGIN reguest
+2. In body method enter username in username
+				password in password
 
-##Version of project
-1. If you on main branch, u can go through url in controllers and test it or using POSTMAN.
-2. If you want test Security, go to Security branch and lauch project again
-Use login page to authorize:
+		roles: 
+		USER: username1, password1
+		ADMIN: username3, password3
+3. You will get tokens. Copy first;
+4. Select your request and enter in Authorization: "Bearer $token";
 
-        User : 
-            login: user
-            password: user
-            
-        Admin: 
-            login: admin
-            password: admin
+

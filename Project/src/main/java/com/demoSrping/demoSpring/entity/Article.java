@@ -34,13 +34,13 @@ public class Article {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Article article = (Article) o;
-        return id != null && Objects.equals(id, article.id);
+        return id.equals(article.id) && Objects.equals(text, article.text) && color == article.color && Objects.equals(user, article.user);
     }
 
     @Override
     public int hashCode() {
-        return getClass().hashCode();
+        return Objects.hash(id, text, color, user);
     }
 }
