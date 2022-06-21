@@ -14,6 +14,10 @@ In order to create a local copy of the project you need:
 1.  Open project and run DemoSpringApplication.main.
 2.  Project should start in your localhost;
 
+##Postman
+1. You will find in Postman folder DemoSecurity.json.
+2. Import this to your postman;
+
 ## AppCheck
 1. Open in postman folder Security and press LOGIN reguest
 2. In body method enter username in username
